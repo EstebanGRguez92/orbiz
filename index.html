@@ -4,11 +4,13 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orbiz.AI Pitch Deck</title>
   <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Diapositiva 1: Portada -->
   <div id="slide1" class="slide active">
     <div class="slide-container">
+      <!-- <div class="rotating-span"></div> -->
       <div class="logo">Orbiz.AI</div>
       <div class="tagline">
         Transformando la experiencia en atención al cliente, <br>con inteligencia artificial.
@@ -370,6 +372,7 @@
 
   <!-- Navegación entre diapositivas -->
   <div class="navigation">
+    <button onclick="goToSlide(1)">Inicio</button>
     <button onclick="prevSlide()">Anterior</button>
     <button onclick="nextSlide()">Siguiente</button>
   </div>
@@ -382,6 +385,15 @@
         document.getElementById("slide" + i).classList.remove("active");
       }
       document.getElementById("slide" + n).classList.add("active");
+      document.getElementById("slide" + n).querySelector('.slide-container').style.opacity = 0;
+      setTimeout(() => {
+        document.getElementById("slide" + n).querySelector('.slide-container').style.opacity = 1;
+      }, 100);
+
+      // Controlar la visibilidad de los botones
+      document.querySelector('.navigation button[onclick="goToSlide(1)"]').style.display = n >= 3 ? 'inline-block' : 'none';
+      document.querySelector('.navigation button[onclick="prevSlide()"]').style.display = n > 1 ? 'inline-block' : 'none';
+      document.querySelector('.navigation button[onclick="nextSlide()"]').style.display = n < totalSlides ? 'inline-block' : 'none';
     }
     function nextSlide() {
       if (currentSlide < totalSlides) {
@@ -395,6 +407,13 @@
         showSlide(currentSlide);
       }
     }
+    function goToSlide(n) {
+      currentSlide = n;
+      showSlide(currentSlide);
+    }
+
+    // Inicializar la primera diapositiva
+    showSlide(currentSlide);
   </script>
 </body>
 </html>
