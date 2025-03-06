@@ -114,7 +114,7 @@
         <p>Reduce tiempos de espera, optimiza operaciones y brinda atención 24/7 con la máxima eficiencia.
       </p>
       <div class="product-screenshots">
-        <img src="images/earth.svg" alt="Interfaz de usuario de Orbiz AI">
+        <img src="images/earth.svg" alt="Centro autónomo de Orbiz AI">
       </div>
       <hr class="divider">
       <h2>Ventajas Competitivas:</h2>
@@ -377,6 +377,9 @@
     <button onclick="nextSlide()">Siguiente</button>
   </div>
 
+  <!-- Botón para volver al inicio -->
+  <button id="backToTop" onclick="scrollToTop()" style="display: none;">↑</button>
+
   <script>
     let currentSlide = 1;
     const totalSlides = 11;
@@ -414,6 +417,20 @@
 
     // Inicializar la primera diapositiva
     showSlide(currentSlide);
+
+    // Función para volver al inicio al hacer scroll
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.onscroll = function() {
+      const backToTopButton = document.getElementById("backToTop");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
   </script>
 </body>
 </html>

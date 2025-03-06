@@ -224,15 +224,15 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Forzar altura completa en pantallas pequeñas */
+    height: 85vh; /* Forzar altura completa en pantallas pequeñas */
     padding: 20px; /* Ajustar el padding para mejor visibilidad */
   }
 
   .slide-container {
     width: 100%;
     padding: 20px;
-    background: rgba(22, 22, 22, 0.6); /* Mantener buena visibilidad sobre el fondo */
-    border-radius: 10px;
+    background-color: #000000;
+    border-radius: 20px;
   }
 
   h1 {
@@ -245,29 +245,37 @@ a {
     text-align: center;
   }
 
+  .frase{
+    font-size: 40px;
+  }
+
   p, li {
     font-size: 16px;
     margin-bottom: 10px;
   }
 
-  /* Botones más grandes para móviles */
+  /* Mostrar solo una flecha hacia abajo en la navegación */
   .navigation {
+    display: none;
+  }
+
+  #backToTop {
     position: fixed;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly; /* Separar botones uniformemente */
+    bottom: 30px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s;
+    width: 38px;
   }
 
-  .navigation button {
-    font-size: 18px;
-    padding: 14px 24px; /* Incrementar el tamaño para mejor interacción táctil */
-    margin: 0 5px;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.7); /* Mejor contraste */
-  }
-
-  .navigation button:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Interacción más notoria */
+  #backToTop:hover {
+    background-color: #0056b3;
   }
 }
