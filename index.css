@@ -216,6 +216,10 @@ a {
 /* Ajustes para dispositivos móviles */
 @media only screen and (max-width: 768px) {
 
+  body {
+    margin-top: 2rem;
+  }
+
   img {
     max-width: 55%;
     margin: 15px 25px;
