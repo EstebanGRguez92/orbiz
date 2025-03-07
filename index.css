@@ -74,14 +74,10 @@ body {
   }
 }
 
-/* .slide.active .slide-container {
-  transform: scale(1.05);
-} */
-
-h1, h2 {
+h1 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #5D9CEC; /* Azul para títulos */
+  color: #7eb2f2;
 }
 
 h2 {
@@ -89,7 +85,7 @@ h2 {
   margin-top: 30px;
   margin-bottom: 15px;
   text-decoration: none;
-  color: #5D9CEC; /* Azul para subtítulos */
+  color: #8ea2ec; /* Azul para subtítulos */
 }
 
 p, li {
@@ -119,6 +115,7 @@ a {
   height: 1px;
   background: #5D9CEC; /* Azul para divisores */
   background-image: linear-gradient(to right, #5D9CEC, #333333);
+  margin: 40px 0;
 }
 
 .product-screenshots{
@@ -218,21 +215,27 @@ a {
 
 /* Ajustes para dispositivos móviles */
 @media only screen and (max-width: 768px) {
+
+  img {
+    max-width: 55%;
+    margin: 15px 25px;
+  }
   /* Asegurar que la diapositiva ocupe toda la pantalla */
   .slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh; /* Forzar altura completa en pantallas pequeñas */
+    height: auto; /* Forzar altura completa en pantallas pequeñas */
     padding: 20px; /* Ajustar el padding para mejor visibilidad */
   }
 
   .slide-container {
     width: 100%;
-    padding: 20px;
+    padding: 30px 20px;
     background-color: #000000;
     border-radius: 20px;
+    margin: 0 auto;
   }
 
   h1 {
