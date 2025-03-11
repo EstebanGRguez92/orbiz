@@ -213,6 +213,23 @@ a {
   color: #338fff; /* Azul más claro al pasar el ratón */
 }
 
+/* Estilos para el contenedor de video */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Ajustes para dispositivos móviles */
 @media only screen and (max-width: 768px) {
 
